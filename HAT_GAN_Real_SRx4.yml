@@ -41,7 +41,6 @@ path:
   pretrain_network_g: C:/Users/LENOVO/Desktop/ImpProj-program/Implant/HAT_GAN_Real_SRx4.pth
   strict_load_g: true
   param_key_g: 'params_ema'
-  results_root: C:/Users/LENOVO/Desktop/ImpPic/_022HATganSRx4(Title256Overlap32)
 
 # validation settings
 val:
