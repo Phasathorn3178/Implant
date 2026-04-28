@@ -3,21 +3,15 @@ datasets:
     dataroot_lq: C:/Users/LENOVO/Desktop/ImpPic/_020EnhancePA(NoProsth)
     io_backend:
       type: disk
-    name: MyTest
+    name: Set5
     type: SingleImageDataset
 manual_seed: 0
 model_type: HATModel
-name: HAT-L_SRx4_ImageNet-pretrain
+name: HAT_SRx4_ImageNet-pretrain
 network_g:
   compress_ratio: 3
   conv_scale: 0.01
   depths:
-  - 6
-  - 6
-  - 6
-  - 6
-  - 6
-  - 6
   - 6
   - 6
   - 6
@@ -36,12 +30,6 @@ network_g:
   - 6
   - 6
   - 6
-  - 6
-  - 6
-  - 6
-  - 6
-  - 6
-  - 6
   overlap_ratio: 0.5
   resi_connection: 1conv
   squeeze_factor: 30
@@ -52,7 +40,7 @@ network_g:
 num_gpu: 0
 path:
   param_key_g: params_ema
-  pretrain_network_g: C:/Users/LENOVO/Desktop/ImpProj-program/Implant/HAT-L_SRx4_ImageNet-pretrain.pth
+  pretrain_network_g: C:/Users/LENOVO/Desktop/ImpProj-program/Implant/HAT_SRx4_ImageNet-pretrain.pth
   strict_load_g: true
 scale: 4
 val:

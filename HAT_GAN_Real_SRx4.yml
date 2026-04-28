@@ -1,48 +1,51 @@
-name: HAT_GAN_Real_SRx4
-model_type: HATModel
-scale: 4
-num_gpu: 0  # set num_gpu: 0 for cpu mode
-manual_seed: 0
-
-tile: # use the tile mode for limited GPU memory when testing.
-  tile_size: 256 # the higher, the more utilized GPU memory and the less performance change against the full image. must be an integer multiple of the window size.
-  tile_pad: 32 # overlapping between adjacency patches.must be an integer multiple of the window size.
-
 datasets:
-  test_1:  # the 1st test dataset
-    name: custom
-    type: SingleImageDataset
+  test_1:
     dataroot_lq: C:/Users/LENOVO/Desktop/ImpPic/_020EnhancePA(NoProsth)
     io_backend:
       type: disk
-
-# network structures
+    name: custom
+    type: SingleImageDataset
+manual_seed: 0
+model_type: HATModel
+name: HAT_GAN_Real_SRx4
 network_g:
-  type: HAT
-  upscale: 4
-  in_chans: 3
-  img_size: 64
-  window_size: 16
   compress_ratio: 3
-  squeeze_factor: 30
   conv_scale: 0.01
-  overlap_ratio: 0.5
-  img_range: 1.
-  depths: [6, 6, 6, 6, 6, 6]
+  depths:
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
   embed_dim: 180
-  num_heads: [6, 6, 6, 6, 6, 6]
+  img_range: 1.0
+  img_size: 64
+  in_chans: 3
   mlp_ratio: 2
-  upsampler: 'pixelshuffle'
-  resi_connection: '1conv'
-
-
-# path
+  num_heads:
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  - 6
+  overlap_ratio: 0.5
+  resi_connection: 1conv
+  squeeze_factor: 30
+  type: HAT
+  upsampler: pixelshuffle
+  upscale: 4
+  window_size: 16
+num_gpu: 0
 path:
+  param_key_g: params_ema
   pretrain_network_g: C:/Users/LENOVO/Desktop/ImpProj-program/Implant/HAT_GAN_Real_SRx4.pth
   strict_load_g: true
-  param_key_g: 'params_ema'
-
-# validation settings
+scale: 4
+tile:
+  tile_pad: 32
+  tile_size: 256
 val:
   save_img: true
-  suffix: ~  # add suffix to saved images, if None, use exp name
+  suffix: null
