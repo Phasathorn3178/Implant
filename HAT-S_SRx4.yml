@@ -1,6 +1,6 @@
 datasets:
   test_1:
-    dataroot_lq: C:/Users/LENOVO/Desktop/ImpPic/_020EnhancePA(NoProsth)
+    dataroot_lq: C:/Users/LENOVO/Desktop/ImpPic/_010All_implant(NoProsth)
     io_backend:
       type: disk
     name: MyTest
