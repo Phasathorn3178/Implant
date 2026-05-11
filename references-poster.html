@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>References — Dental Implant AI</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f5f2eb;
+    --surface: #faf8f3;
+    --text: #1a1714;
+    --muted: #7a7168;
+    --accent: #2d5a3d;
+    --accent-light: #e8f0eb;
+    --border: #ddd8cc;
+    --num: #c8bfa8;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  header {
+    background: var(--accent);
+    color: #fff;
+    padding: 3rem 2rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 30%;
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .header-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.75rem;
+  }
+
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: #fff;
+    max-width: 560px;
+    position: relative;
+  }
+
+  header p {
+    margin-top: 0.75rem;
+    font-size: 14px;
+    color: rgba(255,255,255,0.65);
+    position: relative;
+  }
+
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  .ref-list { display: flex; flex-direction: column; gap: 12px; }
+
+  .ref-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.25rem 1.25rem 1rem;
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 0 1rem;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  .ref-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 20px rgba(45,90,61,0.08);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .ref-card:nth-child(1) { animation-delay: 0.05s; }
+  .ref-card:nth-child(2) { animation-delay: 0.10s; }
+  .ref-card:nth-child(3) { animation-delay: 0.15s; }
+  .ref-card:nth-child(4) { animation-delay: 0.20s; }
+  .ref-card:nth-child(5) { animation-delay: 0.25s; }
+  .ref-card:nth-child(6) { animation-delay: 0.30s; }
+  .ref-card:nth-child(7) { animation-delay: 0.35s; }
+
+  .ref-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--num);
+    padding-top: 2px;
+    text-align: right;
+  }
+
+  .ref-body { display: flex; flex-direction: column; gap: 6px; }
+
+  .ref-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: var(--text);
+  }
+
+  .ref-meta {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .ref-doi {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 4px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    text-decoration: none;
+    background: var(--accent-light);
+    padding: 3px 9px;
+    border-radius: 20px;
+    border: 1px solid rgba(45,90,61,0.15);
+    transition: background 0.15s;
+    word-break: break-all;
+  }
+
+  .ref-doi:hover { background: #d4e8da; }
+
+  .ref-doi::before {
+    content: '↗';
+    font-size: 10px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 12px;
+    color: var(--num);
+    border-top: 1px solid var(--border);
+    font-family: 'DM Mono', monospace;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-tag">Reference List</div>
+  <h1>Dental Implant Identification &amp; AI</h1>
+  <p>7 references · Deep learning, image classification &amp; implant recognition</p>
+</header>
+
+<div class="container">
+  <div class="ref-list">
+
+    <div class="ref-card">
+      <div class="ref-num">[1]</div>
+      <div class="ref-body">
+        <div class="ref-title">Identifying implant abutments and fixtures by application of deep learning concept through artificial intelligence — A review</div>
+        <div class="ref-meta">I. Anbazhagan, R. Ravichandran, H.K. K, V.V. Nair · IP Ann Prosthodont Restor Dent 10 (2024) 1–6</div>
+        <a class="ref-doi" href="https://doi.org/10.18231/j.aprd.2024.001" target="_blank">doi.org/10.18231/j.aprd.2024.001</a>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-num">[2]</div>
+      <div class="ref-body">
+        <div class="ref-title">Deep Learning-Assisted Diagnostic System: Implant Brand Detection Using Improved IB-YOLOv10 in Periapical Radiographs</div>
+        <div class="ref-meta">Y.-J. Lin, S.-L. Chen, Y.-C. Lu et al. · Diagnostics 15 (2025) 1194</div>
+        <a class="ref-doi" href="https://doi.org/10.3390/diagnostics15101194" target="_blank">doi.org/10.3390/diagnostics15101194</a>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-num">[3]</div>
+      <div class="ref-body">
+        <div class="ref-title">Comparative analysis of YOLO variants for dental implant brand identification</div>
+        <div class="ref-meta">H. Tekis, T. Zirek, M. Tassoker · Sci. Rep. 15 (2025) 33304</div>
+        <a class="ref-doi" href="https://doi.org/10.1038/s41598-025-15383-0" target="_blank">doi.org/10.1038/s41598-025-15383-0</a>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-num">[4]</div>
+      <div class="ref-body">
+        <div class="ref-title">Identification of dental implants using deep learning — pilot study</div>
+        <div class="ref-meta">T. Takahashi, K. Nozaki, T. Gonda, T. Mameno, M. Wada, K. Ikebe · International Journal of Implant Dentistry 6 (2020) 53</div>
+        <a class="ref-doi" href="https://doi.org/10.1186/s40729-020-00250-6" target="_blank">doi.org/10.1186/s40729-020-00250-6</a>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-num">[5]</div>
+      <div class="ref-body">
+        <div class="ref-title">SpotImplant — Dental Implant search engine and identification service</div>
+        <div class="ref-meta">Adventive SAS · 2021 · Accessed 7 February</div>
+        <a class="ref-doi" href="https://www.spotimplant.com/en/" target="_blank">spotimplant.com</a>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-num">[6]</div>
+      <div class="ref-body">
+        <div class="ref-title">What Implant Is That?</div>
+        <div class="ref-meta">K. Howell, N. Farley · INFODONTICS, PLLC · Accessed 7 February</div>
+        <a class="ref-doi" href="https://whatimplantisthat.com" target="_blank">whatimplantisthat.com</a>
+      </div>
+    </div>
+
+    <div class="ref-card">
+      <div class="ref-num">[7]</div>
+      <div class="ref-body">
+        <div class="ref-title">Identification of dental implants through the use of Implant Recognition Software (IRS)</div>
+        <div class="ref-meta">G. Michelinakis, A. Sharrock, C. Barclay · International Dental Journal 56 (2006) 203–208</div>
+        <a class="ref-doi" href="https://doi.org/10.1111/j.1875-595X.2006.tb00095.x" target="_blank">doi.org/10.1111/j.1875-595X.2006.tb00095.x</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>dental implant AI · reference list · 7 papers</footer>
+
+</body>
+</html>
