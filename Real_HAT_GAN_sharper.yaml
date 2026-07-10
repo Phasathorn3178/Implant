@@ -1,6 +1,6 @@
 datasets:
   test_1:
-    dataroot_lq: /home/dl-box/users/students/phasathorn-jewrasumnuay/ImpPic/_010All_implant(NoProsth)
+    dataroot_lq: /home/dl-box/users/students/phasathorn-jewrasumnuay/ImpPic/'_010ALL_implant(NoProsth)'
     io_backend:
       type: disk
     name: custom
