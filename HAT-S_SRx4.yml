@@ -1,6 +1,6 @@
 datasets:
   test_1:
-    dataroot_lq: C/home/dl-box/users/students/phasathorn-jewrasumnuay/ImpPic/_010All_implant(NoProsth)
+    dataroot_lq: /home/dl-box/users/students/phasathorn-jewrasumnuay/ImpPic/010All_implant(NoProsth)
     io_backend:
       type: disk
     name: MyTest
@@ -37,7 +37,7 @@ network_g:
   upsampler: pixelshuffle
   upscale: 4
   window_size: 16
-num_gpu: 0
+num_gpu: 1
 path:
   param_key_g: params_ema
   pretrain_network_g: /home/dl-box/users/students/phasathorn-jewrasumnuay/ImpProj-program/Implant/HAT-S_SRx4.pth
